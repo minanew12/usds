@@ -13,11 +13,6 @@ This is a standard erc20 implementation with regular `permit` functionality + EI
 The token uses the ERC-1822 UUPS pattern for upgradeability and the ERC-1967 proxy storage slots standard.
 It is important that the `UsdsDeploy` library sequence be used for deploying the token.
 
-#### OZ upgradeability validations
-
-The OZ validations can be run alongside the existing tests:  
-`VALIDATE=true forge test --ffi --build-info --extra-output storageLayout`
-
 ### UsdsJoin
 
 This is the contract in charge of `mint`ing the erc20 IOUs in exchange of native `vat.dai` balance. It also manages the reverse operation, `burn`ing tokens and releasing `vat.dai`.
